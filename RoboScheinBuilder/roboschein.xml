@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:fox="http://xmlgraphics.apache.org/fop/extensions" xmlns:cms="http://www.pulitzer.ch/2007/CMSFormat">
+  <layout-master-set>
+    <simple-page-master master-name="all-pages" page-width="8.5in" page-height="11in">
+      <region-body margin="0.3in" region-name="xsl-region-body" column-gap="0.25in" />
+      <region-before region-name="xsl-region-before" display-align="after" extent="0.7in" />
+      <region-after region-name="xsl-region-after" display-align="before" extent="0.7in" />
+      <region-start region-name="xsl-region-start" extent="0.7in" />
+      <region-end region-name="xsl-region-end" extent="0.7in" />
+    </simple-page-master>
+  </layout-master-set>
+  <page-sequence master-reference="all-pages">
+    <static-content flow-name="xsl-region-before" font-size="12pt" font-family="Times New Roman">
+      <block />
+    </static-content>
+    <static-content flow-name="xsl-region-after" font-size="12pt" font-family="Times New Roman">
+      <block />
+    </static-content>
+    <static-content flow-name="xsl-region-start" font-size="12pt" font-family="Times New Roman">
+      <block />
+    </static-content>
+    <static-content flow-name="xsl-region-end" font-size="12pt" font-family="Times New Roman">
+      <block />
+    </static-content>
+    <flow flow-name="xsl-region-body" font-size="12pt" font-family="Times New Roman">
+      <block-container>
+        <block-container position="absolute">
+          <block>
+            <external-graphic src="url(C:/Home/School/SYP/HTL_tadeot_roboterfuehrerschein/RoboScheinBuilder/robo-schein.jpg)" content-height="170px" />
+          </block>
+        </block-container>
+        <block-container position="absolute" top="58px" left="4px">
+          <block>
+            <external-graphic id="foto" content-height="69px" />
+          </block>
+        </block-container>
+        <block-container position="absolute" top="48px" left="107px">
+          <block id="nachname" font-size="9pt" />
+        </block-container>
+        <block-container position="absolute" top="68px" left="108px">
+          <block id="vorname" font-size="7.5pt" />
+        </block-container>
+        <block-container position="absolute" top="78px" left="108px">
+          <block id="geburtsdatum" font-size="7.5pt" />
+        </block-container>
+        <block-container position="absolute" top="87px" left="108px">
+          <block id="ausstellungsdatum" font-size="7.5pt" />
+        </block-container>
+      </block-container>
+    </flow>
+  </page-sequence>
+</root>
+
